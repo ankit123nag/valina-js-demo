@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VENIA Product Listing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="hamburger">
+            <i class="fa fa-bars" tabindex="0" aria-label="hamburger menu"></i>
+        </div>
+        <a class="logo" tabindex="0" aria-label="go to homepage" href="#">VENIA</a>
+        <div class="cart">
+            <i class="fa fa-shopping-bag" tabindex="0" aria-label="go to cart"></i>
+        </div>
+    </header>
+
+    <main>
+        <div class="carousel"></div>
+        <section class="listing-section">
+            <div class="page-heading">Men's Outerwear</div>
+            <section class="filters">
+                <button>
+                    <i class="fa fa-filter" aria-hidden="true"></i>
+                    Filter Results
+                </button>
+                <button id="sort-product">
+                    <i class="fa fa-sort" aria-hidden="true"></i>
+                    Sort Products
+                </button>
+            </section>
+            <div id="result-count"></div>
+            <section id="card-container"></section>
+            <div class="laod-more-cta">
+                <button id="laod-more">Load More...</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/terms-of-use" aria-label="Terms of Use">Terms of Use</a>
+            <a href="/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a>
+        </div>
+        <div class="footer-company">
+            <p>&copy Company Name</p>
+            <p>Address Ave, City Name, State ZIP</p>
+            <div class="logo footer-logo" tabindex="0">VENIA</div>
+        </div>
+    </footer>
+    <script src="./index.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+:root {
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    background-color: #1363DF;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+.logo {
+    letter-spacing: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.carousel {
+    background-image: url('../assets/clothes.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 100%;
+    position: relative;
+}
+
+.listing-section {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: -80px;
+}
+
+.page-heading {
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    background-color: #1B252C;
+    padding: 2.5rem;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+}
+
+.filters button {
+    font-size: 1rem;
+    background: none;
+    outline: none;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.filters button i {
+    font-size: 1rem !important;
+}
+
+#result-count {
+    text-align: center;
+    font-size: medium;
+    color: #333;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+#card-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 0.5rem;
+    padding: 1rem;
+    min-height: 350px;
+    background: #fff;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    color: #333;
+    line-height: 1.4rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card:focus h4, .card:hover h4{
+    text-decoration: underline;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: scale-down;
+    border-radius: 0.3rem;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+}
+
+.card h4 {
+    margin: 0.4rem 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.card h4:hover {
+    text-decoration: underline;
+}
+
+.clamp-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+}
+
+.card p {
+    margin: 0.4rem 0;
+    font-weight: 400;
+}
+
+i {
+    font-size: 1.5rem !important;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.laod-more-cta {
+    text-align: center;
+}
+
+.laod-more-cta button {
+    padding: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #1363DF;
+    border: 1px solid #1363DF;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.laod-more-cta button:hover {
+    color: #1363DF;
+    background-color: #fff;
+    border: 1px solid #1363DF;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #333;
+    text-decoration: underline;
+}
+
+.footer-company {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.footer-logo {
+    color: #333;
+    margin-top: 1rem;
+    padding: 2rem;
+}
+
+@media (min-width: 768px) {
+    #card-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 0.8rem;
+    }
+
+    .card img {
+        height: 250px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1024px) {
+    #card-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .card img {
+        height: 300px;
+    }
+}
