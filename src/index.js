@@ -1,6 +1,6 @@
 import { renderCards } from "./cards.js";
 
-const api_endpoint = 'https://fakestoreapi.com/products?sort=';
+const api_endpoint = 'https://fakestoreapi.com/products';
 
 const resultCount = document.getElementById('result-count');
 const loadMore = document.getElementById('laod-more');
@@ -9,9 +9,9 @@ let data = [];
 let offset = 0;
 const limit = 10;
 
-async function fetchData(sort = 'asc') {
+async function fetchData() {
     try {
-        const response = await fetch(api_endpoint + sort);
+        const response = await fetch(api_endpoint);
         if (!response.ok) {
             throw new Error("Something went wrong!!!");
         }
